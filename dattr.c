@@ -79,21 +79,22 @@ main(int argc, char *argv[])
 		for (i = 0; i < strlen(argv[1]); i++) {
 			switch (argv[1][i]) {
 			case 'w':
-				printf("%d\n", screen_crtc_info->width);
+				printf("%d\t", screen_crtc_info->width);
 				break;
 			case 'h':
-				printf("%d\n", screen_crtc_info->height);
+				printf("%d\t", screen_crtc_info->height);
 				break;
 			case 'x':
-				printf("%d\n", screen_crtc_info->x);
+				printf("%d\t", screen_crtc_info->x);
 				break;
 			case 'y':
-				printf("%d\n", screen_crtc_info->y);
+				printf("%d\t", screen_crtc_info->y);
 				break;
 			default:
 				usage(argv[0]);
 			}
 		}
+		printf("\n");
 	}
 
 	free(output_info);
